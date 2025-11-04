@@ -1,0 +1,10 @@
+    # Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /               controllers.HomeController.index(request: Request)
+GET     /search         controllers.HomeController.search(request: Request)
+GET     /statistics/:key     controllers.HomeController.stats(request: Request, key: String)
+
+GET     /assets/*file   controllers.Assets.versioned(path="/public", file: Asset)
